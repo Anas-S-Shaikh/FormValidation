@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Custom Form Validation</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column customContainer">
+        <nav class="navbar navbar-light bg-transparent border-bottom border-dark">
+            <div class="container-fluid">
+                <i class="fab fa-sellcast"><a class="navbar-brand">WIFT</a></i>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <h1 class="mt-4 text-center">Hire vehicles from Swift auto easily!</h1>
+        <small class="text-center">(Demonstration of custom form validation using regex)</small>
+        <div class="container-fluid d-flex justify-content-center flex-column align-items-center">
+            <form class="container w-50 border border-dark shadow p-4 rounded">
+                <div class="row mb-3">
+                    <label for="username" class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username">
+                        <div class="invalid-feedback">
+                            Your username must start with a letter and 4 to 8 character long!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email">
+                        <div class="invalid-feedback">
+                            Please enter a valid email address!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="password">
+                        <div class="invalid-feedback">
+                            Your password must be 4 to 8 character long and contain at least one lowercase, uppercase,
+                            digit and special character!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="options" class="col-sm-2 col-form-label">Select Vehicle</label>
+                    <div class="col-sm-10">
+                        <select class="form-select" id="options">
+                            <option value="1">Lamborghini Gallardo</option>
+                            <option value="2">Tesla Roadster</option>
+                            <option value="3">Ford Mustang GT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="address" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="address">
+                        <div class="invalid-feedback">
+                            Plesae enter a valid address!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="contactNumber" class="col-sm-2 col-form-label">Contact No. </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="contactNumber">
+                        <div class="invalid-feedback">
+                            Please enter a valid contact number
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">Your message for us!</span>
+                        <textarea class="form-control" aria-label="With textarea" id="textarea"></textarea>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <script src="validation.js"></script>
+</body>
+
+</html>
